@@ -27,3 +27,65 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+bens_wallet = 0
+index = 0
+loop do
+    if index == blockchain.size
+      break
+    end
+    if blockchain[index][:to_user] == "ben"
+      bens_wallet = bens_wallet + blockchain[index][:amount]
+    elsif blockchain[index][:from_user] == "ben"
+      bens_wallet = bens_wallet - blockchain[index][:amount]
+    end
+  index = index + 1
+end
+
+brian_wallet = 0
+index = 0
+loop do
+    if index == blockchain.size
+      break
+    end
+    if blockchain[index][:to_user] == "brian"
+      brian_wallet = brian_wallet + blockchain[index][:amount]
+    elsif blockchain[index][:from_user] == "brian"
+      brian_wallet = brian_wallet - blockchain[index][:amount]
+    end
+  index = index + 1
+end
+
+evan_wallet = 0
+index = 0
+loop do
+    if index == blockchain.size
+      break
+    end
+    if blockchain[index][:to_user] == "evan"
+      evan_wallet = evan_wallet + blockchain[index][:amount]
+    elsif blockchain[index][:from_user] == "evan"
+      evan_wallet = evan_wallet - blockchain[index][:amount]
+    end
+  index = index + 1
+end
+
+anthony_wallet = 0
+index = 0
+loop do
+    if index == blockchain.size
+      break
+    end
+    if blockchain[index][:to_user] == "anthony"
+      anthony_wallet = anthony_wallet + blockchain[index][:amount]
+    elsif blockchain[index][:from_user] == "anthony"
+      anthony_wallet = anthony_wallet - blockchain[index][:amount]
+    end
+  index = index + 1
+end
+
+
+puts "Ben's KelloggCoin balance is #{bens_wallet}"
+puts "Brian's KelloggCoin balance is #{brian_wallet}"
+puts "Evans's KelloggCoin balance is #{evan_wallet}"
+puts "Anthony's KelloggCoin balance is #{anthony_wallet}"
